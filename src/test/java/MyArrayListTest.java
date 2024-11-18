@@ -92,4 +92,11 @@ public class MyArrayListTest {
         assertEquals(strArrExpected, strArr);
     }
 
+    @Test
+    void compareTo() {
+        List<Integer> intArr = new MyArrayList<>(new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        List<Integer> intArr2 = new MyArrayList<>(new Integer[] {1, 2, 3, 4, 5, 6, 7, 8});
+
+        assertEquals(1, intArr.compareTo(intArr2));
+    }
 }

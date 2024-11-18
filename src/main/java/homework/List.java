@@ -1,12 +1,13 @@
 package homework;
 
+import java.util.Comparator;
 import java.util.Iterator;
 
 /**
  *The List<T> interface describes a set of standard methods for working with a collection of elements
  * @param <T> the Type of elements in this list
  */
-public interface List<T> extends Iterable<T> {
+public interface List<T extends Comparable<T>> extends Iterable<T> {
     boolean add(T element);
     void add(int index, T element);
     T get(int index);
@@ -17,4 +18,5 @@ public interface List<T> extends Iterable<T> {
     public void sort();
     public int size();
     public Iterator<T> iterator();
+    public int compareTo(List<T> other);
 }

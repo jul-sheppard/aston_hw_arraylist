@@ -1,5 +1,6 @@
 package homework;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -297,5 +298,15 @@ public class MyArrayList<T extends Comparable<T>> implements List<T> {
             }
             return (T) objects[currentIndex++];
         }
+    }
+
+    /**
+     *Compares an object with the object passed as a parameter
+     * @param other another list with which we compare the current list
+     * @return the result of the comparison
+     */
+    @Override
+    public int compareTo(List<T> other) {
+        return Integer.compare(size, other.size());
     }
 }
